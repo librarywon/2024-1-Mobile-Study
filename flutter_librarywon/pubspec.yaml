@@ -88,3 +88,8 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  fonts:
+    - family: Pretnedard
+      fonts:
+        - asset: assets/fonts/Pretendard-Regular.otf
+        - asset: assets/fonts/Pretendard-ExtraBold.otf
