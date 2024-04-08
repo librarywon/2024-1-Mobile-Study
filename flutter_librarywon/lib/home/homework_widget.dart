@@ -20,13 +20,13 @@ class HomeworkWidget extends StatelessWidget {
       padding: const EdgeInsets.all(12.0),
       decoration: BoxDecoration(
         color: Colors.white, // 배경색
-        borderRadius: BorderRadius.circular(10), // 모서리 둥글기
+        borderRadius: BorderRadius.circular(10),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.5), // 그림자 색상
+            color: Colors.grey.withOpacity(0.5),
             spreadRadius: 2,
             blurRadius: 4,
-            offset: Offset(0, 3), // 그림자 위치
+            offset: Offset(0, 3),
           ),
         ],
       ),
