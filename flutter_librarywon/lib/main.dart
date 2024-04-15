@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'CustomShapePainter.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -28,19 +30,37 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(title),
-          bottom: PreferredSize(
-            preferredSize: Size.fromHeight(1.0),
-            child: Divider(
-              height: 1.0,
-              color: Color(0xFFDCDCDC),
-              thickness: 1.0,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            CustomPaint(
+              size: Size(314, 100),
+              painter: CustomShapePainter(
+                leftCircleColor: Colors.white,
+                rightCircleColor: Colors.black,
+              ),
             ),
-          ),
+            SizedBox(height: 30),
+            CustomPaint(
+              size: Size(314, 100),
+              painter: CustomShapePainter(
+                leftCircleColor: Colors.white,
+                rightCircleColor: Colors.white,
+              ),
+            ),
+            SizedBox(height: 30),
+            CustomPaint(
+              size: Size(314, 100),
+              painter: CustomShapePainter(
+                leftCircleColor: Colors.black,
+                rightCircleColor: Colors.black,
+              ),
+            ),
+          ],
         ),
-        body: Column(
-          children: [],
-        ));
+      ),
+    );
   }
 }
