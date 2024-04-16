@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'CustomShapePainter.dart';
+import 'custom_shape_painter.dart';
 
 void main() {
   runApp(const MyApp());
