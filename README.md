@@ -18,3 +18,7 @@ GDSC Flutter Study
 ## 4주차
 
 완전히 새롭게 만들어야하는 형태의 위젯이 있다면 CustomPaint를 통해 직접 그려줘야합니다. CustomPaint를 사용하는 방법에 대해 학습해봅니다.
+
+## 5주차
+
+Flutter를 사용하다보면 State(상태)라는 키워드가 많이 보입니다. Stateless와 Stateful에 대해서 학습해보고, 이를 관리하는 상태관리툴들에 대해서 알아봅니다.
