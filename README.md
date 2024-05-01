@@ -22,3 +22,5 @@ GDSC Flutter Study
 ## 5주차
 
 Flutter를 사용하다보면 State(상태)라는 키워드가 많이 보입니다. Stateless와 Stateful에 대해서 학습해보고, 이를 관리하는 상태관리툴들에 대해서 알아봅니다.
+
+## 6주차
