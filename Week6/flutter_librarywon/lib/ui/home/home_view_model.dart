@@ -21,7 +21,7 @@ class HomeViewModel extends ChangeNotifier {
     try {
       var response = await _weatherService.fetchWeather(cityName, apiKey);
       this.cityName = cityName;
-      temperature = response.main.temp;
+      temperature = _convertKelvinToCelsius(response.main.temp);
       humidity = response.main.humidity;
       pressure = response.main.pressure;
       windSpeed = response.wind.speed;
@@ -30,5 +30,9 @@ class HomeViewModel extends ChangeNotifier {
       error = e.toString();
       notifyListeners();
     }
+  }
+
+  double _convertKelvinToCelsius(double kelvin) {
+    return kelvin - 273.15;
   }
 }
