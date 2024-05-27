@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
                 'assets/images/pokemon_logo.png',
                 width: 300,
                 height: 100,
-              ), // 로컬 이미지
+              ), 
               SizedBox(height: 20),
               Container(
                 padding: EdgeInsets.all(8),
