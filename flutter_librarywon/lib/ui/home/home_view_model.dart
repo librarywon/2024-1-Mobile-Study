@@ -1,33 +1,39 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_librarywon/data/services/weather_service.dart';
+import 'package:flutter_librarywon/data/models/pokemon_response.dart';
+import 'package:flutter_librarywon/data/services/pokemon_service.dart';
 
 class HomeViewModel extends ChangeNotifier {
-  final WeatherService _weatherService;
+  final PokemonService _pokemonService;
 
-  // Constructor
-  HomeViewModel({WeatherService? weatherService})
-      : _weatherService = weatherService ?? WeatherService(Dio());
+  HomeViewModel({PokemonService? pokemonService})
+      : _pokemonService = pokemonService ?? PokemonService(Dio());
 
-  String? cityName;
-  double? temperature;
-  int? humidity;
-  int? pressure;
-  double? windSpeed;
-  String? error;
+  PokemonResponse? _pokemon;
+  bool _isLoading = false;
+  String _errorMessage = '';
 
-  Future<void> fetchWeather(String cityName) async {
-    const apiKey = "df54b40e7c614cb48107fac285e16b9a";
+  PokemonResponse? get pokemon => _pokemon;
+  bool get isLoading => _isLoading;
+  String get errorMessage => _errorMessage;
+
+  Future<void> fetchPokemon(String name) async {
+    _isLoading = true;
+    _errorMessage = '';
+    notifyListeners();
+
     try {
-      var response = await _weatherService.fetchWeather(cityName, apiKey);
-      this.cityName = cityName;
-      temperature = response.main.temp;
-      humidity = response.main.humidity;
-      pressure = response.main.pressure;
-      windSpeed = response.wind.speed;
-      notifyListeners();
+      _pokemon = await _pokemonService.fetchPokemon(name);
+    } on DioException catch (dioError) {
+      if (dioError.response?.statusCode == 404) {
+        _errorMessage = "잘못된 포켓몬 이름입니다.";
+      } else {
+        _errorMessage = dioError.message.toString();
+      }
     } catch (e) {
-      error = e.toString();
+      _errorMessage = e.toString();
+    } finally {
+      _isLoading = false;
       notifyListeners();
     }
   }
