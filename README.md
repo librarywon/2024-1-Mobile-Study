@@ -1,6 +1,10 @@
 # 2024-1-Mobile-Study
 GDSC Flutter Study
 
+### 1~4 주차 우수 스터디원 
+<img src = "https://github.com/librarywon/2024-1-Mobile-Study/assets/52442547/e309d9dd-221d-4de2-8fe6-cd128dff413b" width="30%" height="30%">
+
+
 ## 1주차
 
 플러터 기본 세팅과 프로젝트 생성하는 법에 대해 알아봅니다. 그리고 Flutter의 UI 구성 방식인 위젯에 대해 학습하고,  위젯을 통해 UI를 구성하는 방식에 대해 알아봅니다.
