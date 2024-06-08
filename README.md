@@ -4,6 +4,8 @@ GDSC Flutter Study
 ### 1~4 주차 우수 스터디원 
 <img src = "https://github.com/librarywon/2024-1-Mobile-Study/assets/52442547/e309d9dd-221d-4de2-8fe6-cd128dff413b" width="30%" height="30%">
 
+### 5~8 주차 우수 스터디원
+<img src = "https://github.com/librarywon/2024-1-Mobile-Study/assets/52442547/5efbac84-704a-42f1-8d3b-c2c14e2d766b" width="30%" height="30%">
 
 ## 1주차
 
